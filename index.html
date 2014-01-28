@@ -141,6 +141,22 @@ directory (the directory where your Documents directory is).</p>
 "flask_test", and uses Git, which we installed earlier, to load into that project
 a sample project that we have prepared for you.</p>
 
+<p>Now, we'll be passing around a thumb drive with some files on it at this point,
+if you had the opportunity to grab files off the thumb drive instead of having
+  to download them, here's what you'll need to do to use it with Vagrant:</p>
+
+<p>Open up the file in the <code>flask_test</code> directory called <code>Vagrantfile</code> in any
+text editor.  It will look like this:</p>
+
+<p><img src="https://raw2.github.com/squidarth/environment-setup/master/static/original_vagrantfile-2.png" alt="vagrantfile original"></p>
+
+<p>Move a file called <code>precise32.box</code> from the thumb drive to any directory on your 
+computer, and then change the line that reads <code>config.vm.box_url = "http://files.vagrantup.com/precise32.box"</code>
+to point to the precise32.box file you got from your computer.  For example,
+if you put it in a folder called <code>~/Downloads</code>, then, this line should read
+  <code>config.vm.box_url = "~/Downloads/precise32.box"</code>.  If you didn't get a chance
+  to get files from the thumb drive, don't worry about this step and move on.</p>
+
 <p>To start the virtual machine for this project, first move to the "flask_test"
 directory, and run the command <code>vagrant up</code>.</p>
 
